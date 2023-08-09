@@ -1,10 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*phần 1*/
+        div.container{
+
+            width: 690px;
+            height: 284px;
+            background-color: lightblue;
+            margin-left: 100px;
+            margin-top: 70px;
+
+
+        }
+        form{
+            width: 97%;
+            margin-left: 7px;
+            position: relative;
+            top: 11px;
+            padding-left: 5px;
+            margin-top: -20px;
+            background-color: white;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        h1{
+            font-weight: 200;
+            font-size: 25px;
+            width: 97%;
+            margin-left: 7px;
+            margin-top: 10px;
+            background-color: #ea5c27;
+            color: #ffff;
+            text-align: center;
+            padding: 0;
+        }
+
+        .td_color {
+            color: blue;
+        }
+        table{
+            margin-left: 80px;
+
+        }
+        tr{
+           line-height: 0.8cm;
+        }
+        input{
+            margin-right: 5px;
+
+        }
+
+        .btn{
+
+            cursor: pointer;
+
+        }
+
+
+        /*phần 2*/
+
+        div.container2{
+            background-color: #eecf9d;
+            width: 600px;
+            padding: 1px 5px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        h2{
+            background-color: #d9f6d9;
+            position: relative;
+            top: -13px;
+            font-weight: 0.5;
+            font-size: 24px;
+            padding: 3px ;
+            color: blue;
+
+        }
+        table{
+            margin-top: -10px;
+        }
+        tr{
+            line-height: 0.8cm;
+
+        }
+        label{
+            color: blue;
+        }
+
+        td{
+            padding-right: 40px;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+   <div class="container">
+       <form>
+           <h1>SỞ THÍCH CỦA BẠN</h1>
+           <table >
+               <tr>
+                   <td class="td_color" >Họ và tên </td>
+                   <td><input type="text" size="30"></td>
+               </tr>
+               <tr>
+                   <td class="td_color" style="float: right">Email</td>
+                   <td><input type="text" size="25"></td>
+               </tr>
+               <tr >
+                   <td rowspan="3" class="td_color" style="position: relative; top:-35px; left: 8px;" >Sở thích</td>
+                   <td style="color: #ea5c27"><input type="checkbox">Thể thao <input type="checkbox">Âm nhạc <input type="checkbox">Đọc sách</td>
+
+               </tr>
+               <tr >
+                   <td style="color: #ea5c27"><input type="checkbox">Lướt web <input type="checkbox">Chơi game <input type="checkbox">Điện ảnh</td>
+
+               </tr>
+               <tr >
+                   <td style="color: #ea5c27"><input type="checkbox">Du lịch</td>
+
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><input type="submit" value="Gửi thông tin" class="btn"> <input type="reset" value="Nhập lại" class="btn"> </td>
+
+               </tr>
+           </table>
+
+       </form>
+   </div>
+
+
+   <div class="container2">
+       <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+       <table>
+           <tr>
+               <td><label for="hovaten">Họ và tên</label></td>
+               <td><input type="text" size="30" name="name" id="hovaten"></td>
+           </tr>
+           <tr>
+               <td><label for="ngaysinh">Ngày sinh</label></td>
+               <td><input type="text" size="10" name="date" id="ngaysinh"></td>
+           </tr>
+           <tr>
+               <td><label for="gioitinh">Giới tính</label></td>
+               <td><input type="radio" name="gioitinh" id="gioitinh">Nam <input type="radio" name="gioitinh" id="gioitinh"> Nữ</td>
+           </tr>
+           <tr>
+               <td><label>Địa chỉ</label></td>
+               <td><textarea cols="30" rows="5"></textarea></td>
+           </tr>
+           <tr>
+               <td><label>Lớp</label></td>
+               <td>
+                   <select name="loaisanpham">
+
+                       <option value="">--Chọn lớp--</option>
+                       <option value="">lớp a0123i1</option>
+                       <option value="">lớp a0223i1</option>
+                       <option value="">lớp a0323i1</option>
+                       <option value="">lớp a0423i1</option>
+                       <option value="">lớp a0523i1</option>
+                       <option value="">lớp a0623i1</option>
+                       <option value="">lớp a0723i1</option>
+                   </select>
+               </td>
+           </tr>
+           <tr>
+               <td><label for="hopthu">Email</label></td>
+               <td><input type="text" name="email" id="hopthu"></td>
+           </tr>
+           <tr>
+               <td> <label for="dienthoai">Điện thoại</label></td>
+               <td><input type="text" name="phone" id="dienthoai"></td>
+           </tr>
+           <tr>
+               <td></td>
+               <td><input type="submit" value="Đăng Ký"> <input type="reset" value="Nhập lại"></td>
+           </tr>
+
+       </table>
+   </div>
 </body>
 </html>
