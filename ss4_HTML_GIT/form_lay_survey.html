@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form lấy survey</title>
+    <style>
+        body{
+            font-size: 12px;
+        }
+
+        div.title{
+            line-height: 0.3cm;
+        }
+        div.title > h1{
+            font-size: 24px;
+            font-weight: 1;
+            margin-left: 13px;
+        }
+        div.title > p{
+            font-weight: 0.4;
+            color: #7e7a7a;
+            margin-left: 13px;
+            font-size: 14px;
+        }
+
+
+
+
+        div.kick > h2{
+            font-size: 15px;
+            line-height: 0.3;
+            margin-left: 13px;
+        }
+
+        div.kick > select{
+            width: 800px;
+            padding: 2px;
+            margin-bottom: 10px;
+            margin-left: 13px;
+        }
+
+        div.list > ul{
+            line-height: 0.2cm;
+            margin-top: -7px;
+        }
+
+        div.list > h2{
+            font-size: 15px;
+            line-height: 0.2cm;
+            margin-left: 13px;
+        }
+
+        div.list > ul > li{
+          list-style: none;
+            line-height: 0.3cm;
+            margin-left: -30px;
+            margin-bottom: 2px;
+
+
+        }
+        div.list > ul > li > input{
+            margin-top: 10px;
+            line-height: 0.3cm;
+
+
+        }
+
+
+
+        input#action:active >  div.list > ul > div > p{
+            display: block;
+        }
+
+        div.list > ul > div > p{
+            font-size: 13px;
+            /*display: none;*/
+        }
+
+
+        .canle{
+            text-align: left;
+        }
+
+        .canchinh{
+            padding: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moments to complete this satisfaction survey.</p>
+        </div>
+
+        <div style="width: 98%; border-bottom: 1px dotted #ccc ;margin-left: 13px"></div>
+
+        <form action="" class="information">
+            <div class="kick">
+                <h2>What is your age range?</h2>
+                <select>
+                    <option>18-24</option>
+                    <option>25-34</option>
+                    <option>35-50</option>
+                    <option>50+</option>
+                </select>
+            </div>
+            <div class="kick">
+                <h2>What is your yearly income range?</h2>
+                <select>
+                    <option>$0 - $25,000</option>
+                    <option>$25,001 - $50,000</option>
+                    <option>$50,001 - $100,000</option>
+                    <option>$100,000+</option>
+                </select>
+            </div>
+            <div class="list">
+                <h2>Gender Identity</h2>
+                <ul >
+                    <li><input type="radio" name="check" id="check">Male</li>
+                    <li><input type="radio" name="check" id="check ">Female</li>
+                    <li><input type="radio" name="check" id="check ">Nonbinary</li>
+                    <li><input type="radio" name="check" id="check, action">Other</li>
+                    <input type="text" size="16">
+                    <div><p>Maximum of <b>250</b> characters. &nbsp; &nbsp; &nbsp; &nbsp; <i>Currently Used: <b>0</b> characters.</i></p></div>
+                </ul>
+            </div>
+
+            <div class="list">
+                <h2>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h2>
+                <ul>
+                    <li><input type="checkbox"> product 1</li>
+                    <li><input type="checkbox"> product 2</li>
+                    <li><input type="checkbox"> product 3</li>
+                </ul>
+            </div>
+
+            <div class="list">
+                <h2>How often would you use our new product?</h2>
+                <ul>
+                    <li><input type="radio" name="checker" id="checker"> Daily</li>
+                    <li><input type="radio" name="checker" id="checker"> Weekly</li>
+                    <li><input type="radio" name="checker" id="checker"> Monthly</li>
+                </ul>
+            </div>
+
+            <div class="list">
+                <h2 >What would you pay for the new product?</h2>
+                <div style="margin-left: 13px"><p>$ <input type="text" size="4"> <b>.</b> <input type="text" size="1" style="width: 9px"></p></div>
+                <p style="font-size: 10px; margin-top: -5px"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dollars  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cents</p>
+            </div>
+
+            <div class="list">
+                <h2 >What features would you like to see in the new product.</h2>
+                <textarea cols="192" rows="8" style="margin-left: 13px"></textarea>
+            </div>
+
+            <div class="list">
+                <p style="margin-left: 13px">Please rate your level of agreement with the following statements.</p>
+                <table border="1" cellspacing="0" style="margin-left:13px; color: black;  text-align: center; line-height: 0.3cm ; width: 98%">
+                    <tr style="background-color: #dcdbdb">
+                        <td class="canchinh" style="width: 40%"></td>
+                        <td class="canchinh" style="width: 15%">Strongly Disagree</td>
+                        <td class="canchinh" style="width: 15%">Disagree</td>
+                        <td class="canchinh" style="width: 15%">Agree</td>
+                        <td class="canchinh" style="width: 15%">Strongly Agree</td>
+                    </tr>
+                    <tr>
+                        <td class="canle" ><b>Our products are priced fairly.</b></td>
+                        <td>
+                            <input type="radio" name="checkin" id="checkin">
+                            <p style="margin-top: 3px; margin-bottom: 1px">1</p>
+
+                        </td>
+                        <td>
+                            <input  type="radio" name="checkin" id="checkin">
+                            <p style="margin-top: 3px; margin-bottom: 1px">2</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin" id="checkin">
+                            <p style="margin-top: 3px; margin-bottom: 1px">3</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin" id="checkin">
+                            <p style="margin-top: 3px; margin-bottom: 1px">4</p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="canle"><b>Our products are high quality.</b></td>
+                        <td>
+                            <input type="radio" name="checkin1" id="checkin1">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">1</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin1" id="checkin1">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">2</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin1" id="checkin1">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">3</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin1" id="checkin1">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">4</p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="canle"><b>You would recommend our product to a friend or coworker.</b></td>
+                        <td>
+                            <input type="radio" name="checkin2" id="checkin2">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">1</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin2" id="checkin2">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">2</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin2" id="checkin2">
+                            <p style="margin-top: 3px ; margin-bottom: 1px">3</p>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="checkin2" id="checkin2">
+                            <p style="margin-top: 3px; margin-bottom: 1px">4</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Submit" style="margin-left: 13px; background-color: #bbbaba; border: none; padding: 5px 15px; margin-top: 10px; border-radius: 5px">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
