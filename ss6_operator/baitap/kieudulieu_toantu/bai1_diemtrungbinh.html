@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        inputLy = prompt("input điểm Lý");
+        inputHoa= prompt("input điểm Hóa");
+        inputSinh = prompt("input điểm Sinh");
+        let ly = parseFloat(inputLy);
+        let hoa = parseFloat(inputHoa);
+        let sinh = parseFloat(inputSinh);
+        let average = (ly + hoa + sinh) / 3;
+        document.write("điểm lý: " + ly);
+        document.write('<br/>');
+        document.write("điểm hóa: " + hoa);
+        document.write('<br/>');
+        document.write("điểm sinh: " + sinh);
+        document.write('<br/>');
+        document.write("điểm trung bình 3 môn là: " + average);
+    </script>
+</body>
+</html>
