@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div.container{
+            width: 600px;
+
+
+        }
+        table{
+            width: 100%;
+        }
+        tr{
+            text-align: center;
+        }
+        tr > td > input{
+            padding: 5px 5px;
+            border-radius: 5px;
+        }
+
+        tr > td > select {
+            padding: 5px 40px 5px 2px;
+            border-radius: 5px;
+
+        }
+        tr > td > select > option > p{
+
+        }
+
+        input.btn_submit{
+            padding: 5px 20px;
+            cursor: pointer;
+            border: #8484fd solid 2px;
+            background-color: #5a5aad;
+            color: #ffff;
+        }
+    </style>
+</head>
+<body>
+       <div class="container">
+           <form action="">
+               <table>
+                   <tr>
+                       <th>Amount</th>
+                       <th>From Curency</th>
+                       <th>To Curency</th>
+                       <th></th>
+                   </tr>
+                   <tr>
+                       <td><input type="number" id="number"></td>
+                       <td>
+                           <select name="" id="myselect1" >
+                               <option value="VND"> <p>VietNam</p> </option>
+                               <option value="USD"> <p>USD</p></option>
+                           </select>
+                       </td>
+                       <td>
+                           <select id="myselect2">
+                               <option value="VND"> <p>VietNam</p> </option>
+                               <option value="USD"> <p>USD</p></option>
+                           </select>
+                       </td>
+                       <td><input type="button" value="Convert" class="btn_submit" onclick="chuyendoitiente()"></td>
+
+                   </tr>
+               </table>
+                    <p id="result"></p>
+           </form>
+       </div>
+        <script>
+                function chuyendoitiente(){
+                    let giatrivao = document.getElementById("number").value;
+                    let select1 = document.getElementById("myselect1").value;
+                    let select2 = document.getElementById("myselect2").value;
+                    let result;
+                    if (select1 == select2)
+                    {
+                       result = "result: " + giatrivao + " Đ";
+                    }
+                    else if (select1 == "VND" && select2 == "USD")
+                    {
+                        result = "result: " + giatrivao/23000 + " $";
+
+                    }
+                    else if (select1 == "USD" && select2 == "VND")
+                    {
+
+                        result = "result: " + giatrivao*23000 + " Đ";
+
+                    }
+                    else{
+                        result = "result: " + giatrivao + " $";
+                    }
+                        document.getElementById("result").innerHTML = result;
+                }
+
+
+
+
+                // if (select1 == "VND" && select2 == "VND")
+                // {
+                //     ketqua =  inputMoney * 1;
+                //     // ketqua = document.write("result: " + inputMoney * 1 + "Đ");
+                // }else if (select1 == "VND" && select2 == "USD")
+                // {
+                //     ketqua = document.write("result: " + inputMoney * 0.04 + "$");
+                // }else if (select1 == "USD" && select2 == "USD")
+                // {
+                //     ketqua = document.write("result: " + inputMoney * 1 + "$");
+                // }else
+                // {
+                //     ketqua = document.write("result: " + inputMoney * 23000 + "Đ");
+                // }
+                // document.write(ketqua);
+        </script>
+</body>
+</html>
