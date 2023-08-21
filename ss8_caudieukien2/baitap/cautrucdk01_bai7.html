@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.container{
+            font-size: 10px;
+            line-height: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h2>tính cước điện thoại</h2>
+            <p>60 phút: 1200vnd</p>
+            <p>100 phút: 2500vnd</p>
+            <p>150 phút: 3200vnd</p>
+            <p>200 phút: 4000vnd</p>
+            <input type="number" id="so_phut">
+            <button type="button" name="btn" onclick="tinhcuoc()">tính</button>
+        <p  id="result"></p>
+    </div>
+    <script>
+        function tinhcuoc(){
+            let sophut = document.getElementById("so_phut").value;
+            let phut60, phut100, phut150, phut200;
+            phut60 = 1200;
+            phut100 = 2500;
+            phut150 = 3200;
+            phut200 = 4000;
+            let tinh;
+
+            if(sophut <= 60){
+                tinh = "cước phí" + " " + sophut * phut60 + " " + " vnd";;
+            }else if(60 < sophut <= 100){
+                tinh = "cước phí" + " " + sophut * phut100 + " " + " vnd";
+            }else if(100 < sophut <= 150){
+                tinh = "cước phí" + " " + sophut * phut150 + " " + " vnd";
+            }else if(150 < sophut <= 200){
+                tinh = "cước phí" + " " + sophut * phut200 + " " + " vnd";
+            }else{
+                tinh = "gọi gì mà lâu quá dậy";
+            }
+             document.getElementById("result").innerHTML = tinh;
+        }
+    </script>
+</body>
+</html>
