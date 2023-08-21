@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="soA">
+        <input type="number" id="soB">
+        <input type="number" id="soC">
+        <button type="button" name="btn" onclick="check()">check</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function check(){
+            let soA = parseInt(document.getElementById("soA").value);
+            let soB = parseInt(document.getElementById("soB").value);
+            let soC = parseInt(document.getElementById("soC").value);
+            let result = "max = " + Math.max(soA, soB, soC);
+             document.getElementById('result').innerHTML =  result;
+
+
+        }
+    </script>
+</body>
+</html>

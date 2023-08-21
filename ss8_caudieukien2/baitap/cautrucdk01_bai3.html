@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <input type="number" id="songuyen">
+    <button type="button" name="btn" onclick="check()">check</button>
+    <p id="result"></p>
+</div>
+<script>
+    function check(){
+        let songuyen = document.getElementById("songuyen").value;
+        let result;
+        if (songuyen > 0){
+            result  = "so nguyen lớn hơn 0";
+        }else{
+            result  = "so nguyen nhỏ hơn 0";
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

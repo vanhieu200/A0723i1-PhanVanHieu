@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input#date_in_month{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <input type="number" id="date_in_month" min="1" max="12">
+        <input type="button" name="button" value="ngày trong tháng" onclick="check()">
+    </form>
+    <p id="result"></p>
+</div>
+<script>
+    function check(){
+        let input = parseInt(document.getElementById("date_in_month").value);
+
+        switch (input){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML = "tháng  " + " " + input + " " + " có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = "tháng" + " " + input + " " + " có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("result").innerHTML = "tháng" + " " + input + " " + " có 30 ngày";
+                break;
+        }
+        document.getElementById("result").innerHTML = ketqua;
+    }
+</script>
+
+</body>
+</html>

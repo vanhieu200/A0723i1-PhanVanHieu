@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+
+    table{
+        border: 2px black solid;
+    }
+
+    input#inputNumber{
+        float: right;
+    }
+    table tr td button{
+        width: 40px;
+        color: #0000ff;
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="inputNumber"></td>
+            </tr>
+            <tr>
+                <td><button type="button" name="btn" value="1" onclick="inputValue(this.value)">1</button></td>
+                <td><button type="button" name="btn" value="2" onclick="inputValue(this.value)">2</button></td>
+                <td><button type="button" name="btn" value="3" onclick="inputValue(this.value)">3</button></td>
+                <td><button type="button" name="btn" value="+" onclick="inputValue(this.value)">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" name="btn" value="4" onclick="inputValue(this.value)">4</button></td>
+                <td><button type="button" name="btn" value="5" onclick="inputValue(this.value)">5</button></td>
+                <td><button type="button" name="btn" value="6" onclick="inputValue(this.value)">6</button></td>
+                <td><button type="button" name="btn" value="-" onclick="inputValue(this.value)">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" name="btn" value="7" onclick="inputValue(this.value)">7</button></td>
+                <td><button type="button" name="btn" value="8" onclick="inputValue(this.value)">8</button></td>
+                <td><button type="button" name="btn" value="9" onclick="inputValue(this.value)">9</button></td>
+                <td><button type="button" name="btn" value="*" onclick="inputValue(this.value)">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" name="btn" value="AC" onclick="remote()">AC</button></td>
+                <td><button type="button" name="btn" value="0" onclick="inputValue(this.value)">0</button></td>
+                <td><button type="button" name="btn" onclick="caculate()">=</button></td>
+                <td><button type="button" name="btn" value="/" onclick="inputValue(this.value)">/</button></td>
+            </tr>
+        </table>
+    </div>
+        <script>
+           let input = document.getElementById("inputNumber");
+           function inputValue(value){
+               input.value += value;
+           }
+           function caculate(){
+               let result = eval(input.value);
+               input.value = result;
+           }
+           function remote(){
+               input.value = " ";
+           }
+
+        </script>
+</body>
+</html>

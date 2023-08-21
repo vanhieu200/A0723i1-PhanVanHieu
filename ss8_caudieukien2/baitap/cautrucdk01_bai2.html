@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="age">
+        <button type="button" name="btn" onclick="check()">check</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function check(){
+            let age = document.getElementById("age").value;
+            let result;
+            if (age >= 16){
+                result = "học sinh đã đủ điều kiện vào lớp 10";
+            }else{
+                result = "học sinh không đủ điều kiện vào lớp 10";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

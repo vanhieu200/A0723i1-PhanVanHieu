@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="diemtoan" placeholder="Điểm Toán">
+        <input type="number" id="diemvan" placeholder="Điểm Văn">
+        <input type="number" id="diemanh" placeholder="Điểm Anh">
+        <button type="button" name="btn" onclick="check()">average</button>
+        <p id="result_average"></p>
+        <p id="result"></p>
+    </div>
+    <script>
+        function check(){
+            let diemtoan = parseFloat(document.getElementById("diemtoan").value);
+            let diemvan = parseFloat(document.getElementById("diemvan").value);
+            let diemanh = parseFloat(document.getElementById("diemanh").value);
+            let average;
+            let result ;
+            average = (diemvan + diemtoan + diemanh) / 3;
+            if (average >= 8.5){
+                result = "học lực giỏi";
+            }else if(6.5 <= average < 8){
+                result = "học lực khá";
+            }else if(5 <= average < 6.5){
+                result = "học lực trung bình";
+            }else{
+                result = "học lực yếu";
+            }
+            document.getElementById("result_average").innerHTML = average;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
