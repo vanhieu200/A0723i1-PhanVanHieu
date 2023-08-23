@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>kiểm tra số tuổi của một người</p>
+        <input type="number" id="age">
+        <button type="button" name="btn" onclick="kiemtratuoi()">kiểm tra</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function kiemtratuoi(){
+            let age = parseInt(document.getElementById("age").value);
+            let result;
+            if (Number.isInteger(age)){
+                if(age > 0 && age <= 120){
+                    result = "là tuổi của một người";
+                }else{
+                    result = "không phải là tuổi của một người";
+                }
+            }else{
+                result = "không phải là tuổi của một người";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

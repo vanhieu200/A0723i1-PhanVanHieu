@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>kiểm tra các cạnh có phải là cạnh của 1 tam giác</p>
+        <input type="text" id="canhA" size="3">
+        <input type="text" id="canhB" size="3">
+        <input type="text" id="canhC" size="3">
+        <button type="button" name=" btn" onclick="kiemtracanhTG()">kiểm tra</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function kiemtracanhTG(){
+            let canhA = parseFloat(document.getElementById("canhA").value);
+            let canhB = parseFloat(document.getElementById("canhB").value);
+            let canhC = parseFloat(document.getElementById("canhC").value);
+            let result;
+            if (canhA > 0 && canhB > 0 && canhC > 0){
+               if (canhA + canhB > canhC && canhA + canhC > canhB && canhB + canhC > canhA){
+                   result  = "đây là các cạnh của tam giác";
+               }else{
+                   result  = "đây không phải là các cạnh của tam giác";
+               }
+            }else{
+                result = "không phải là cạnh cuủa một tam giác vì có cạnh nhỏ hơn 0";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
