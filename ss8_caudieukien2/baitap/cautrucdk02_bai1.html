@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p> chuyển đổi độ C sang độ F</p>
+        <input type="number" id="nhietdo">
+        <button type="button" name="btn" onclick=" chuyendoinhietdo()">chuyển</button>
+        <p id="dof"></p>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function chuyendoinhietdo(){
+            let doC = document.getElementById("nhietdo").value;
+            let doF, result;
+
+                doF ="độ F: " + " " + (doC * 9)/5 + 32;
+            if(doF <= -273.15){
+                result = " nhiệt độ quá mức thấp";
+            }else{
+                result = " nhiệt độ bình thường";
+            }
+            document.getElementById("dof").innerHTML = doF;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

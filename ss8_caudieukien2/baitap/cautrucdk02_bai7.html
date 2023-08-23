@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>giải phương trình ax <sup>2</sup> + bx + c = 0</p>
+        <input type="text"  size="3" id="soA" placeholder="số A">
+        <input type="text"  size="3" id="soB" placeholder="số B">
+        <input type="text"  size="3" id="soC" placeholder="số C">
+        <button type="button" name="btn" onclick="bac2() ">tính</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function bac2(){
+            let soA = parseFloat(document.getElementById("soA").value );
+            let soB = parseFloat(document.getElementById("soB").value );
+            let soC = parseFloat(document.getElementById("soC").value );
+            let delta, result;
+            delta = (soB*soB)-4*(soA*soC);
+
+            if (delta < 0){
+                result = "phương trình vô nghiệm";
+            } else if(delta == 0){
+                result = "phương trình có nghiệm kép x1 = x2 :" +  " " + (-soB/(2*soA));
+            }else if(delta > 0){
+                result = "phương trình có hai nghiệm phân biệt: " + " " + "x1 = " + " " + (-soB-Math.sqrt(delta)/2*soA) + " " + "x2 = " + " " + (-soB+Math.sqrt(delta)/2*soA);
+
+            }else{
+                result = "không hợp lệ";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

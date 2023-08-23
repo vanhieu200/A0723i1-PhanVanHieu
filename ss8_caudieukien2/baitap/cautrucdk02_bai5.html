@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h3>tính diện tích tam giác vuông</h3>
+        <input type="text" id="canha" placeholder="cạnh A">
+        <input type="text" id="canhb" placeholder="cạnh B">
+        <button type="button" name="btn" onclick="dientichtgv()">tính</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function dientichtgv(){
+            let canhA = parseFloat(document.getElementById("canha").value);
+            let canhB = parseFloat(document.getElementById("canhb").value);
+            let S;
+            if (canhA != null && canhB != null){
+                S = "diện tích tam giác vuông: " + " " + 1/2*(canhA*canhB) + "cm";
+            }else{
+                S = "không hợp lệ vui lòng nhập lại cạnh A và B";
+            }
+            document.getElementById("result").innerHTML = S;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>tìm nghiệm pt ax + b = 0</p>
+        <input type="text" id="soA" placeholder="vế 1">
+        <input type="text" id="soB" placeholder="vế 2">
+        <button type="button" name="btn" onclick="ptbac1()">tính</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function ptbac1(){
+            let soA = parseFloat(document.getElementById("soA").value);
+            let soB = parseFloat(document.getElementById("soB").value);
+            let result;
+            if (soA != null && soB != null){
+                result = "có nghiệm" + " " + (-soB/soA);
+            }else{
+                result = " không hợp lệ vui lòng nhập lại";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

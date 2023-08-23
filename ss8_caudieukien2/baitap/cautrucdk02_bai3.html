@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h3>tính diện tích hình vuông</h3>
+        <input type="text" id="canhA">
+        <button type="button" name=" btn" onclick="dientich()">chuyển</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function dientich(){
+            let canhA = parseFloat(document.getElementById("canhA").value);
+            let result;
+            if (canhA != null || canhA != " "){
+                result = "diện tích hình vuông: " + " " + (canhA * canhA);
+            }else{
+                result = "không hợp lệ";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

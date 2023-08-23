@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>chuyển từ met sang feet</p>
+        <input type="text" id="met">
+        <button type="button" name="btn" onclick="chuyendoi() ">chuyển</button>
+        <p id="feet"></p>
+    </div>
+
+    <script>
+        function chuyendoi(){
+            let met = parseFloat(document.getElementById("met").value);
+            let feet;
+
+            if (met != null){
+                feet = met * 3.2808;
+            }else{
+                feet = "không hợp lệ";
+            }
+            document.getElementById("feet").innerHTML = feet;
+        }
+    </script>
+</body>
+</html>
