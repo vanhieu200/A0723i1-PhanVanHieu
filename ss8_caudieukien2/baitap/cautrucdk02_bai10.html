@@ -14,16 +14,48 @@
         <p>bậc 5 (301 đến 400kWh): 2.834 đồng/kWh</p>
         <p>bậc 6 (401 kWh trở lên): 2.927 đồng/kWh</p>
         <input type="number" id="sodien" placeholder="số điện">
-        <input type="number" id="giadien" placeholder="giá điện">
-        <button type="button" name="btn" onclick="">tính</button>
+<!--        <input type="number" id="giadien" placeholder="giá điện">-->
+        <button type="button" name="btn" onclick="tinhtiendien()">tính</button>
         <p id="result"></p>
     </div>
     <script>
         function tinhtiendien(){
             let sodien = document.getElementById("sodien").value;
-            let giadien = document.getElementById("giadien").value;
-            let result;
-            
+            // let giadien = document.getElementById("giadien").value;
+            let bac1,bac2,bac3,bac4,bac5,bac6,result;
+            bac1 = 0; bac2 = 0; bac3 =0; bac4 =0; bac5 = 0; bac6 = 0;
+
+            if (0 <= sodien <= 50){
+                bac1 = sodien * 1678;
+            }else if (51 <= sodien <= 100){
+                bac1 = sodien * 1678;
+                bac2 = sodien * 1734;
+            }else if (101 <= sodien <= 200){
+                bac1 = sodien * 1678;
+                bac2 = sodien * 1734;
+                bac3 = sodien * 2014;
+            }else if (201 <= sodien <= 300){
+                bac1 = sodien * 1678;
+                bac2 = sodien * 1734;
+                bac3 = sodien * 2014;
+                bac4 = sodien * 2536;
+            }else if (301 <= sodien <= 400){
+                bac1 = sodien * 1678;
+                bac2 = sodien * 1734;
+                bac3 = sodien * 2014;
+                bac4 = sodien * 2536;
+                bac5 = sodien * 2834;
+            }else {
+                bac1 = sodien * 1678;
+                bac2 = sodien * 1734;
+                bac3 = sodien * 2014;
+                bac4 = sodien * 2536;
+                bac5 = sodien * 2834;
+                bac6 = sodien * 2927;
+            }
+
+            result = "tổng tiền điện của bạn là: " + (bac1 + bac2 + bac3 + bac4 + bac5 + bac6) + "vnd";
+            document.getElementById("result").innerHTML = result;
         }
     </script>
 </body>

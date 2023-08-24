@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>tính thuế thu nhập cá nhân theo mỗi năm</p>
+        <input type="text" id="thue" placeholder="mấy triệu 1 năm">
+        <button type="button" name="btn" onclick="tinhthuecanhan()">tính</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function tinhthuecanhan(){
+            let thue = parseFloat(document.getElementById("thue").value);
+            let result ;
+            if(thue == 60000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.05) + "%";
+            }else if(60000000 < thue <= 120000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.10) + "%";
+            } else if(120000000 < thue <= 216000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.15) + "%";
+            } else if(216000000 < thue <= 384000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.20) + "%";
+            }else if(384000000 < thue <= 624000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.25) + "%";
+            }else if(624000000 < thue <= 960000000){
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.30) + "%";
+            }else{
+                result = "thue của bạn trong năm nay là" + " " + (thue*0.35) + "%";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
