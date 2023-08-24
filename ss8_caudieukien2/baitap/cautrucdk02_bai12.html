@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>tính lãi ngân hàng</p>
+    <input type="number" id="tiengui" placeholder="tiền gốc">
+    <input type="number" id="sonam" placeholder="số năm">
+    <button type="button" name="btn" onclick="tinhlaisuat()">tính</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhlaisuat(){
+            let tiengoc = document.getElementById("tiengui").value;
+            let sonam = document.getElementById("sonam").value;
+            let lai = 0.11, result;
+            if(tiengoc != null){
+                result  = "tiền lãi nhận được" + " " + (tiengoc*Math.pow((1+lai),sonam)) + "vnd";
+            }else{
+                result = "không hợp lệ";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
