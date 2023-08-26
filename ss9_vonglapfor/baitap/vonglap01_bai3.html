@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập vào số bạn muốn");
+    fibonacci(n);
+    let fn;
+    function fibonacci(n){
+        if(n == 1){
+            fn == true;
+        }else{
+            for (i = 1 ; i < n; i++){
+                fn = fibonacci(n-1) + fibonacci(n-2);
+            }
+        }
+        document.write(fibonacci(n));
+    }
+</script>
+</body>
+</html>
