@@ -5,6 +5,34 @@
     <title>Title</title>
 </head>
 <body>
+<button type="button" name="btn" onclick="play()">chơi</button>
+<script>
+    function play() {
+        let ngaunhien = parseInt(prompt("bạn nhập vào số muốn giới hạn từ 1 tới nó: "));
+        let bandoan = parseInt(prompt("bạn đoán số bao nhiêu"));
+        let ran = Math.floor(Math.random() * ngaunhien);
+        let count = 0, j=1;
+        let result;
+        for (var i = 1; i <= ngaunhien; i++) {
+           count++;
+            while (bandoan !== ran){
+                if (count == 4){
+                    alert("bạn đã hết lần đoán");
+                }else{
+                    if (bandoan < ran) {
+                        bandoan = parseInt(prompt("số bạn nhập nhỏ hơn rồi"));
+                    } else if (bandoan > ran) {
+                        bandoan = parseInt(prompt("số bạn nhập lớn hơn rồi"));
+                    } else {
+                        return;
+                    }
+                }
+                j++;
+            }
 
+        }
+        document.write("bạn đã đoán chính xác");
+    }
+</script>
 </body>
 </html>
