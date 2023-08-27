@@ -6,22 +6,18 @@
 </head>
 <body>
 <script>
-
+    let fibonacci,sum = 0 , n = 20;
     let fibonacci1 = 1;
     let fibonacci2 = 1;
-    let fibonacci, n = 20;
-    document.write(fibonacci1 + "<br>");
-    document.write(fibonacci2 + "<br>");
-    for (var i = 3; i <= n; i++){
+    var i ;
+    for (i = 3; i <= n; i++){
         fibonacci = fibonacci1 + fibonacci2;
-        document.write(fibonacci + "<br>");
+        sum += fibonacci;
         fibonacci1 = fibonacci2;
-        fibonacci2 = fibonacci ;
+        fibonacci2 = fibonacci;
 
     }
-
-
-
+    document.write("tổng của 20 ố fibonacci đàu tiên là: " + " " + sum) ;
 </script>
 </body>
 </html>

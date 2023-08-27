@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("nhập vào 1 số"));
+        let fibonacci,result;
+        let fibonacci1 = 1;
+        let fibonacci2 = 1;
+
+        for (var i = 3; i <= n; i++){
+            fibonacci = fibonacci1 + fibonacci2;
+            if (fibonacci % 5 === 0){
+                result = fibonacci;
+                break;
+            }
+            fibonacci1 = fibonacci2;
+            fibonacci2 = fibonacci;
+        }
+        document.write("số fibonacci chia hết cho 5 đầu tiên là: " + " " + result);
+
+    </script>
+</body>
+</html>
