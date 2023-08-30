@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+        let chuong,i,j;
+        chuong = "<table border='1' cellspacing='1' style='font-size: 10px; width: 700px' cellpadding='2'>";
+        for (i = 2; i <= 9; i++){
+            chuong += "<tr>";
+            for (j = 1; j<= 10; j++){
+                chuong+= "<td> " + i + " " + " x " + " " + j + " " + " = " + (i*j) + "</td>";
+            }
+            chuong += "</tr>";
+        }
+        chuong += "</table>";
+        document.write(chuong);
+    </script>
+</body>
+</html>

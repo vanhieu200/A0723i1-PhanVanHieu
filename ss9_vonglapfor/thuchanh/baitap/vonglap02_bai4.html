@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dong = parseInt(prompt("nhập vào số dòng"));
+    let cot = parseInt(prompt("nhập vào số cột"));
+        for (var i = 1; i <= dong; i++){
+            for (var j = 1; j <=cot; j++){
+                if (i === 1 || j === 1 || i === dong || j === cot){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp; ");
+                }
+            }
+            document.write("<br>");
+        }
+</script>
+</body>
+</html>

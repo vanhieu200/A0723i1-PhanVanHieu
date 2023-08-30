@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibonacci,sum = 0 , n = 20;
+    let fibonacci1 = 1;
+    let fibonacci2 = 1;
+    var i ;
+    for (i = 3; i <= n; i++){
+        fibonacci = fibonacci1 + fibonacci2;
+        sum += fibonacci;
+        fibonacci1 = fibonacci2;
+        fibonacci2 = fibonacci;
+
+    }
+    document.write("tổng của 20 ố fibonacci đàu tiên là: " + " " + sum) ;
+</script>
+</body>
+</html>

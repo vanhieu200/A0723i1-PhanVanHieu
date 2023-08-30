@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let fibonacci1 = 1;
+    let fibonacci2 = 1;
+    let fibonacci, n = 20;
+    document.write(fibonacci1 + "<br>");
+    document.write(fibonacci2 + "<br>");
+    for (var i = 3; i <= n; i++){
+        fibonacci = fibonacci1 + fibonacci2;
+        document.write(fibonacci + "<br>");
+        fibonacci1 = fibonacci2;
+        fibonacci2 = fibonacci ;
+
+    }
+
+
+
+</script>
+</body>
+</html>

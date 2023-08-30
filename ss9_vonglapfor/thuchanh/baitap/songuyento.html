@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+   let number = parseInt(prompt("bạn muốn hiển thị bn số nguyên tố: "));
+   let count = 0, n = 2;
+   let check = true;
+   while(count < number){
+       for (var i = 2; i <= n/2; i++){
+           if(n%i===0){
+               check = false;
+               break;
+           }
+       }
+       if(check){
+          document.write(n + "<br>");
+          count++;
+   }
+       n++;
+   }
+
+
+    </script>
+</body>
+</html>

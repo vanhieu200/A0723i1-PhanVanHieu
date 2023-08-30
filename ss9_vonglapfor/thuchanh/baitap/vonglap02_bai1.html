@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function fibonacci(fn){
+        let fibonacci;
+        let fibonacci2;
+        let fibonacci1;
+        if(fn == 0 || fn == 1){
+            return 1;
+        }else{
+            fibonacci1 = 1;
+            fibonacci2 = 1;
+            document.write(fibonacci1 + " <br>");
+            document.write(fibonacci2 + " <br>");
+            for (var i = 1; i <= fn; i++){
+                fibonacci = fibonacci1 + fibonacci2;
+                document.write(fibonacci + "<br>");
+                fibonacci1 = fibonacci2;
+                fibonacci2 = fibonacci;
+            }
+        }
+    }
+    let fn = parseInt(prompt("nhập vào 1 số: "));
+    fibonacci(fn);
+</script>
+</body>
+</html>

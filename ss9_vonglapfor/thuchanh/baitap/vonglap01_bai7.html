@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let n = 100;
+    var i;
+    for (i= 1; i <= n; i++){
+
+        if(i % 3 === 0 && i % 5 === 0){
+            document.write("FizzBuzz" + "<br>");
+            continue;
+        }else{
+            if(i % 3 === 0){
+                document.write("Fizz" + "<br>");
+                continue;
+            }
+            if(i % 5 === 0){
+                document.write("Buzz" + "<br>");
+                continue;
+            }
+        }
+        document.write(i + "<br>");
+
+    }
+</script>
+</body>
+</html>

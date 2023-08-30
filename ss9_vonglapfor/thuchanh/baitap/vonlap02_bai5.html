@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+
+        <td><input type="number" placeholder="vốn" id="money"/></td>
+    </tr>
+    <tr>
+
+        <td><input type="number" placeholder="tháng" id="month"/></td>
+    </tr>
+    <tr>
+
+        <td><input type="number" placeholder="lãi" id="rate"/></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhlaisuat()" value="cal">Calculation</button></td>
+    </tr>
+</table>
+<div id="result"></div>
+</div>
+<script>
+    function tinhlaisuat() {
+        let tien = parseFloat(document.getElementById("money").value);
+        let thang = parseFloat(document.getElementById("month").value);
+        let lai = parseFloat(document.getElementById("rate").value);
+        if (tien < 0 || thang < 0 || lai < 0) {
+            document.getElementById("kq_check").innerHTML= "Vui lòng nhập thông tin lớn lớn hơn hoặc bằng 0";
+        } else {
+            let money=tien;
+            for (let i=1;i<=thang;i++) {
+                money = money * (1 + lai/100);
+            }
+            document.getElementById("result").innerHTML="Số tiền lãi là: "+ (money-tien) +" vnd";
+        }
+    }
+</script>
+</body>
+</html>
