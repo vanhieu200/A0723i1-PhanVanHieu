@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("input");
+    let UPPER = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    let LOWER = "qwerrtyuiopasdfghjklzxcvbnm"
+    let arr = [];
+
+    for(var i = 0; i<input.length; i++){
+        if (UPPER.indexOf(input[i]) !== -1){
+            arr.push(input[i].toLowerCase());
+        }else if(LOWER.indexOf(input[i] !== -1)){
+            arr.push(input[i].toUpperCase());
+        }else{
+            arr.push(input[i]);
+        }
+    }
+    console.log(arr.join(" "));
+</script>
+</body>
+</html>
