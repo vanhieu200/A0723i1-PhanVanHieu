@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>nhập số nguyên</label>
+<input type="number" id="input_number">
+<input type="button" name="btn" value="ADD" onclick="add()">
+<input type="button" name="btn" value="check" onclick="kiemtra()">
+<p id="result1"></p>
+<p id="result2"></p>
+
+
+<script>
+    let x = 0;
+    let array = Array();
+    function add(){
+        array[x] = document.getElementById("input_number").value;
+        x++;
+        document.getElementById("input_number").value = " ";
+    }
+    function kiemtra(){
+        let result1 = " ";
+        let result2 = " ";
+
+        for (var i = 0; i < array.length; i++){
+            result1 += array[i] + " &nbsp; &nbsp;";
+
+        }
+
+        for (var j = array.length; j >= 0; j--){
+            result2 += array[j] + " &nbsp; &nbsp;";
+        }
+        document.getElementById("result1").innerHTML = "array: " + result1;
+        document.getElementById("result2").innerHTML = "array dao nguoc: " + result2;
+    }
+</script>
+</body>
+</html>

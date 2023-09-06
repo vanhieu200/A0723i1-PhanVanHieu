@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>nhập số nguyên</label>
+<input type="number" id="input_number">
+<input type="button" name="btn" value="ADD" onclick="add()">
+<input type="button" name="btn" value="check" onclick="kiemtra()">
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+
+<script>
+    let x = 0;
+    let array = Array();
+    function add(){
+        array[x] = parseInt(document.getElementById("input_number").value);
+        x++;
+        document.getElementById("input_number").value = " ";
+    }
+
+    function kiemtra(){
+        let result = " ";
+        let max = array[0];
+        let address = 0;
+        let sum = 0, average = 0 ,count = 0;
+        for (var i = 0; i < array.length; i++){
+            if (array[i] > max){
+                max = array[i];
+                address = i;
+            }
+            result += array[i] + " &nbsp; &nbsp;";
+            sum += array[i];
+            count++;
+            average = sum/count;
+
+        }
+        document.getElementById("result1").innerHTML = "array: " + result;
+        document.getElementById("result2").innerHTML = "max is: " + max;
+        document.getElementById("result3").innerHTML = "sum is: " + sum + " average is: " + average;
+    }
+
+</script>
+</body>
+</html>

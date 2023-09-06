@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h2>dịch các loại trái cây</h2>
+        <label>nhập từ:</label>
+        <input type="text" id="input_text">
+        <input type="button" name="btn" onclick="dichtu()" value="dịch">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function dichtu(){
+            let text = document.getElementById("input_text").value;
+            let arrayEnglish = ["banana", "apple", "pear","orange"];
+            let arrayVietnam = ["chuối", "táo", "lê", "cam"];
+            let temp, result = "";
+
+            for (var i = 0 ; i < arrayEnglish.length;i++){
+                if (text == arrayEnglish[i]){
+                    temp = i;
+                    for (var j = 0; j < arrayVietnam.length; j++){
+                        if (temp == j){
+                            result = arrayVietnam[j];
+                        }
+                    }
+                }
+            }
+            for (var i = 0 ; i < arrayVietnam.length;i++){
+                if (text == arrayVietnam[i]){
+                    temp = i;
+                    for (var j = 0; j < arrayEnglish.length; j++){
+                        if (temp == j){
+                            result = arrayEnglish[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
