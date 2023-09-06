@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input_number">
+<input type="button" name="btn" value="ADD" onclick="add()">
+<input type="button" name="btn" value="show" onclick="display()">
+<input type="button" name="btn" value="delete" onclick="xoa()">
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<script>
+    let x = 0;
+    let array = Array();
+    function add(){
+        array[x] = parseInt(document.getElementById("input_number").value);
+        x++;
+        document.getElementById("input_number").value = " ";
+    }
+    function display(){
+        let result = " ";
+        for (var i = 0; i < array.length; i++){
+            result += array[i] + "&nbsp; &nbsp;";
+        }
+        document.getElementById("result1").innerHTML ="array before: "  + result;
+    }
+
+    function xoa() {
+
+        let v = parseInt(prompt("nhập số v"));
+        let result = v + "is not in array";
+        for (let i = 0; i < array.length; i++) {
+            if (v == array[i]) {
+                array.splice(i,1);
+                array.push("0");
+                result = `${v} fount at and update new array: ${array.join(",")}` ;
+                i--;
+            }
+
+        }
+        document.getElementById("result3").innerHTML = result;
+
+    }
+</script>
+</body>
+</html>

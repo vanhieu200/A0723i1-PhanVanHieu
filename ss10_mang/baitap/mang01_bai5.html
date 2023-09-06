@@ -15,7 +15,26 @@
 
 <script>
     let x= 0 ;
-    let
+    let array = Array();
+    function add(){
+        array[x] = document.getElementById("input_number").value;
+        x++;
+        document.getElementById("input_number").value = " ";
+    }
+
+    function kiemtra(){
+        let result = " ";
+        let count = 0;
+        for (var i = 0; i < array.length; i++){
+            if (array[i] < 0){
+                count++;
+            }
+            result +=  array[i] + "&nbsp; &nbsp;";
+        }
+        document.getElementById("result1").innerHTML = "array: " + result;
+        document.getElementById("result2").innerHTML = "số lượng số âm: " + count;
+
+    }
 </script>
 </body>
 </html>

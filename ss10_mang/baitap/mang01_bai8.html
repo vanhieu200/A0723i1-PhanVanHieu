@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input_number">
+<input type="button" name="btn" value="ADD" onclick="add()">
+<input type="button" name="btn" value="show" onclick="display()">
+<input type="button" name="btn" value="sắp xếp" onclick="sapxep()">
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+
+<script>
+    let x = 0;
+    let array = Array();
+    function add(){
+        array[x] = parseInt(document.getElementById("input_number").value);
+        x++;
+        document.getElementById("input_number").value = " ";
+    }
+    function display(){
+        let result = " ";
+        for (var i = 0; i < array.length; i++){
+            result += array[i] + "&nbsp; &nbsp;";
+        }
+        document.getElementById("result1").innerHTML ="array before: "  + result;
+    }
+
+    function sapxep(){
+        let temp;
+        let result = " ";
+        for (var i = 0; i < array.length; i++){
+            for (var j = i; j < array.length; j++){
+                if(array[i] < array[j]){
+                    temp = array[i]
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        document.getElementById("result3").innerHTML ="sap xep giam dan " + array;
+    }
+
+</script>
+</body>
+</html>
