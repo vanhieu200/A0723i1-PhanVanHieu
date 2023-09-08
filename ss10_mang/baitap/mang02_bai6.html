@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numString = parseInt(prompt("số lượng phần tử"));
+    let arr = new Array(numString);
+    document.write("My array: ");
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("phần tử thứ " +i + "là");
+        document.write(arr[i]+"&nbsp; ");
+    }
+    document.write("<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            arr[i] = "_";
+        }
+    }
+    document.write("mảng sau thay đổi từ (-) sang (_) là ");
+    for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i]+"&nbsp; ");
+    }
+</script>
+</body>
+</html>
