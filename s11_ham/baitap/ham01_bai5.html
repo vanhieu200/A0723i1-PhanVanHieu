@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let array1 = [ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+
+    function checkStar(){
+        let index_number = 0;
+        let result = "";
+        for (var i = 0; i < array1.length; i++){
+            if (input_Star == array1[i]){
+                input_number = i;
+                for (var j = 0 ; j < array2.length; j++){
+                    if (j == index_number){
+                        result = array2[i];
+                        return result;
+                    }else{
+                        result = "không tìm thấy chòm sao";
+                        return result;
+                    }
+                }
+            }else{
+                result = "không tìm thấy chòm sao";
+                return result;
+            }
+        }
+
+    }
+    let input_Star = prompt("nhập vào 1 ngoi sao: ");
+    document.write(checkStar(input_Star));
+</script>
+</body>
+</html>

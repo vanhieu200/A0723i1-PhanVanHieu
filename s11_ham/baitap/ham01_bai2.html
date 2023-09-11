@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<input type="button" name="btn" value="check" onclick="isIncrease()">
+<p id="result"> </p>
+<script>
+    function isIncrease(){
+        let n = document.getElementById("number").value;
+        let number = n++;
+        document.getElementById("result").innerHTML = number + " sau khi tăng lên 1 đơn vị: " + n;
+
+    }
+
+
+
+</script>
+</body>
+</html>

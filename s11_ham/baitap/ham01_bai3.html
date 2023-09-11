@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="number one">
+<input type="number" id="number2" placeholder="number two">
+<input type="button" name="btn" value="check" onclick="check()">
+
+
+<script>
+    function check(){
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        let sum = 0;
+        if (a < b){
+            sum = a + b;
+            alert("số thứ nhất nhỏ hơn số thứu hai nên tổng của hai số: " + sum);
+        }else{
+            alert("số thứ nhất là: " + a + "  " + "số thứ hai: " + b );
+        }
+    }
+</script>
+</body>
+</html>
