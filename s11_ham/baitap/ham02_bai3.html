@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorial(n){
+       if (n == 1){
+           return 1;
+       }else{
+           return n*factorial(n-1);
+       }
+    }
+    let input_number = prompt("input number: ");
+    document.write("giai thừa của " + input_number + "!" + " là " + factorial(input_number) );
+</script>
+</body>
+</html>

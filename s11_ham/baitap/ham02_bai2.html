@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function area(r){
+            let result = r * r * 3.14;
+            return result;
+        }
+        function perimeter(r){
+            let result = r * 2 * 3.14;
+            return  result;
+        }
+
+        let bankinh = parseFloat(prompt("nhập bán kính: "));
+        document.write("chu vi hình tròn: " + perimeter(bankinh) + "<br>");
+        document.write("diện tích hình tròn: " + area(bankinh));
+
+</script>
+</body>
+</html>
