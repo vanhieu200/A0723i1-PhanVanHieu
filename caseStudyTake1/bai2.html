@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input_text = prompt("nhập 1 kí tự: ");
+    let char = ["o","u","i","a","e","O","U","I","A","E"];
+    let result = false;
+
+    for (var  i  = 0; i<char.length; i++){
+        if (input_text == char[i]){
+            result = true;
+        }else{
+            result;
+        }
+    }
+
+    if (result == true){
+        document.write(input_text + " là nguyên âm ");
+    }else{
+        document.write(input_text + " là phụ âm ");
+    }
+
+
+</script>
+</body>
+</html>
