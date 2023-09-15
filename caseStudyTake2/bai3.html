@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
-    let star = prompt("input number: ");
+    let star = prompt("input number ");
     function stars(n){
         for (var i = 1; i <= n; i++){
-            for(var j = 1; j <= n-i; j++){
+            for (var j = 1; j <= n - i; j++){
                 document.write("&nbsp; ");
             }
-            for (var k = 1; k <= 2*i-1; k++){
-                document.write("*");
+            for (var j = 1; j <= 2*i-1; j++){
+                if (j === 1 || j === 2*i-1 || i === n-0){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp; ");
+                }
             }
             document.write("<br>");
         }

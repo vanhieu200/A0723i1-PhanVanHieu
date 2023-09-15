@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    function star(n){
+        for (var i = 1; i <= n; i++){
+            for (var j = 1; j <= i; j++){
+                if (j === 1 || j === i || i === n){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp; ")
+                }
+            }
+            document.write("<br>");
+        }
+    }
+    let heigth = parseInt(prompt("input number"));
+    star(heigth);
+</script>
 </body>
 </html>
