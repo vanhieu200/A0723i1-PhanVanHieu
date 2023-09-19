@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("input number"));
+    let arrA = Array(number);
+    // khai báo mảng a
+    for (var i = 0; i < arrA.length; i++){
+        arrA[i] = parseFloat(prompt("input element " + i + " : " ));
+    }
+    // xuất mảng a
+    document.write("array A: " + "<br>");
+    for (var i = 0; i < arrA.length; i++){
+        document.write( arrA[i] + "&nbsp;" );
+    }
+
+    document.write("<br>");
+
+    let arrB = Array(number);
+    let sum = 0;
+    // khai báo mảng b
+    for (var i = 0; i < arrB.length; i++){
+        sum += arrA[i];
+        arrB[i] = sum;
+    }
+    // xuất mảng b
+    document.write("array B: " + "<br>");
+    for (var i = 0 ; i < arrB.length; i++){
+        document.write( arrB[i] + " &nbsp;");
+    }
+</script>
+</body>
+</html>
