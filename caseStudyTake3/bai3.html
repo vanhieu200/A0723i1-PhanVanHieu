@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("input number element: "));
+    let numerator = new Array(number);
+    // mảng numarator
+    for (var i = 0 ; i < numerator.length; i++){
+        numerator[i] = prompt("element " + i + " is: ");
+    }
+
+    // mảng denominators
+    let denominators = new Array(number);
+    for (var i = 0 ; i < denominators.length; i++){
+        denominators[i] = prompt("element " + i + " is ");
+    }
+
+//     xuất mảng numerator
+    document.write("array numerator <br>");
+    for (var i = 0 ; i < numerator.length; i++){
+        document.write(numerator[i] + "&nbsp; ");
+    }
+
+    //     xuất mảng denominators
+    document.write("<br> array denominators <br>");
+    for (var i = 0 ; i < denominators.length; i++){
+        document.write(denominators[i] + "&nbsp; ");
+    }
+
+    let address;
+    let maxFraction = numerator[0] / denominators[0];
+    for (var i = 0; i < numerator.length; i++){
+        for (var i = 0; i < denominators.length ; i++){
+            if (numerator[i]/denominators[i] > maxFraction){
+                address = i;
+                maxFraction = numerator[i]/denominators[i];
+
+            }
+        }
+    }
+    document.write("<br>" + numerator[address] + " / " + denominators[address] + " is " + address);
+
+</script>
+</body>
+</html>

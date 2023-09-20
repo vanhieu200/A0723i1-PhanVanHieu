@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+    // khai báo mảng a
+    let number1 = parseInt(prompt("element number A: "));
+    let arrA = new Array(number1);
+    for (var i = 0; i < arrA.length; i++){
+        arrA[i] = prompt("element " + i + " is ");
+    }
+
+//     khai báo mảng b
+    let number2 = parseInt(prompt("element number B:"));
+    let arrB = new Array(number2);
+    for (var j = 0; j < arrB.length; j++){
+        arrB[j] = prompt("element " + j + " is ");
+    }
+
+    // xuất mảng a
+    document.write("array A" + " <br>");
+    for (var i = 0; i < arrA.length; i++){
+        document.write(arrA[i] + "&nbsp; ");
+    }
+    // xuất mảng b
+    document.write("<br>" + "array B" + " <br>");
+    for (var j = 0; j < arrB.length; j++){
+        document.write(arrB[j] + "&nbsp; ");
+    }
+
+
+    for (var i = 0; i < arrA.length; i++){
+        for (var j = 0; j < arrB.length; j++) {
+            if (arrB[j] === arrA[i]) {
+                arrB.splice(j, 1);
+            }
+        }
+    }
+
+    document.write("<br>" + "array B" + " <br>");
+    arrB.sort(function(a,b){return a-b})
+    for (var j = 0; j < arrB.length; j++){
+        document.write(arrB[j] + "&nbsp; ");
+    }
+
+</script>
+
+</body>
+</html>
