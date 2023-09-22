@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            line-height: 0.5;
+            font-size: 11px;
+        }
+        h1{
+            text-align: center;
+        }
+        div.container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome landmark 81</h1>
+    <h3>tầng 70</h3>
+
+    <div class="container">
+        <div class="item1">
+            <h3>MENU</h3>
+            <p>1. Cafe</p>
+            <p>2. Cam vắt</p>
+            <p>3. Nước ép cà rốt</p>
+            <p>4. Nước ép cà chua</p>
+            <p>5. Nước lọc</p>
+            <p>6. Nước dừa</p>
+<!--            <p>7. Thoát</p>-->
+            <p>mời bạn chọn 1 loại thức uốn, ghi chữ thường nhé :3</p>
+        </div>
+        <div class="item2">
+            <h3>Giá Tiền</h3>
+            <p>450.000 vnd</p>
+            <p>235.000 vnd</p>
+            <p>215.000 vnd</p>
+            <p>220.000 vnd</p>
+            <p>100.000 vnd</p>
+            <p>235.000 vnd</p>
+        </div>
+    </div>
+<div>
+    <input type="text" id="inputText" placeholder="tên nước uốn">
+    <input type="number" id="inputNumber" placeholder="số lượng" style="width: 70px">
+    <input type="button" name="btn" value="Okay" onclick="orderMenu()">
+    <input type="button" name="btn" value="Exit" onclick="exitMenu()">
+    <p id="price"> </p>
+    <p id="sum"> </p>
+</div>
+
+
+    <script>
+        function orderMenu(){
+            let text = document.getElementById("inputText").value;
+            let number = document.getElementById("inputNumber").value;
+            let menu = ["cafe", "cam vắt","nước ép cà rốt","nước ép cà chua","nước lọc","nước dừa"];
+            let prices = [450000,235000,215000,220000,100000,235000];
+            let result = "", temp;
+            let sum ;
+
+            for (var i = 0; i < menu.length; i++){
+                if (text == menu[i]){
+                    temp = i;
+                   for (var j = 0; j < prices.length; j++){
+                       if (temp == j){
+                         result = prices[j];
+                         sum = number * prices[i];
+                       }
+                   }
+                }
+            }
+
+
+            document.getElementById("price").innerHTML ="giá của " + text + " là: " + result + "&nbsp; vnd";
+            document.getElementById("sum").innerHTML = "tổng tiền bạn phải trả là: " + sum + "&nbsp; vnd";
+        }
+        function exitMenu(){
+            document.getElementById("inputText").value = " ";
+            document.getElementById("inputNumber").value = " ";
+            document.getElementById("price").innerHTML = " ";
+            document.getElementById("sum").innerHTML = " ";
+        }
+    </script>
+</body>
+</html>
