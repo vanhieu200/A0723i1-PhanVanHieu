@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="inputText">
+<input type="button" name="btn" onclick="main()" value="Run">
+<p id="result"></p>
+<script>
+    function main(){
+        let text = [document.getElementById("inputText").value];
+        let output = [];
+        text =text.toString().trim().toLowerCase();
+        for (var i = 0; i < text.length;i++){
+            if (text[i] === " " && text[i+1] === " "){
+                continue;
+            }else{
+                output.push(text[i]);
+            }
+        }
+        output[0] = output[0].toUpperCase();
+        for (var i = 0; i < output.length; i++){
+            if (output[i] === " "){
+                output[i+1] = output[i+1].toUpperCase();
+            }
+        }
+        document.getElementById("result").innerHTML = output.join("");
+    }
+</script>
 </body>
 </html>
