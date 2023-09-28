@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.width = width;
+            this.length = length;
+        }
+        //tính diện tích
+        acreage() {
+            return this.width * this.length;
+        }
+        //tính chu vi
+        perimeter() {
+            return (this.width + this.length) * 2;
+        }
+    }
+    // nhập dài và rộng
+    let chieuDai = parseInt(prompt("Nhập chiều dài vào đây : "));
+    let chieuRong = parseInt(prompt("Nhập chiều rộng vào đây : "));
+    //kiểm tra
+    if (chieuDai <= chieuRong) {
+        alert("lỗi");
+        window.location.reload();
+    } else {
+        // tạo đối tượng
+        let rectangle = new Rectangle(chieuDai,chieuRong);
+        //xuất hình
+        alert("S:  " +rectangle.acreage());
+        alert("Chu vi: " +rectangle.perimeter());
+        let c = confirm("again");
+        if (c) {
+            window.location.reload();
+        } else {
+            alert("exit");
+        }
+    }
+</script>
+</body>
+</html>

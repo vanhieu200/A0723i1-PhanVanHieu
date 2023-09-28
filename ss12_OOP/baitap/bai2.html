@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        celsiusToFahrenheit() {
+            return (this.celsius * 9/5) + 32;
+        }
+        celsiusToKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+    let celsius = parseFloat(prompt("Nhập độ C:"));
+    let temperature = new Temperature(celsius);
+
+    if (celsius >= -273) {
+        alert("Fahrenheit is " +temperature.celsiusToFahrenheit());
+        alert("Kelvin is " +temperature.celsiusToKelvin());
+        let a = confirm("vui lòng thử lại");
+        if (a) {
+            window.location.reload();
+        } else {
+            alert("pip pip :(");
+        }
+    } else {
+        alert("vui lòng thử lại");
+        window.location.reload();
+    }
+
+</script>
+</body>
+</html>
