@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function differentSymbolsNaive(s){
+        // tạo đối tượng Set để lưu trữ chuỗi
+        let unique = new Set(s);
+        // trả về kích thước của Set
+        return unique.size;
+    }
+    let input_string = prompt("nhập chuỗi");
+    let result = differentSymbolsNaive(input_string);
+    document.write("số kí tự khác nhau trong chuổi là " + result );
+</script>
+</body>
+</html>

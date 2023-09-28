@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = prompt("input s1");
+    let s2 = prompt("input s2");
+    let showchar = findCommonCharacter(s1,s2);
+    function findCommonCharacter(s1,s2){
+        const commonchars = new Set();
+        for (const char of s1){
+            if (s2.includes(char)){
+                commonchars.add(char);
+            }
+        }
+        return commonchars.size;ed 
+    }
+
+
+    document.write("số lượng kí tự chung: " + showchar);
+</script>
+</body>
+</html>
