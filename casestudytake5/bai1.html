@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tổng số chẵn trong ma trận</title>
+</head>
+<body>
+<script>
+    function tinhTongSoChan(matrix) {
+        let tong = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] % 2 === 0) {
+                    tong += matrix[i][j];
+                }
+            }
+        }
+
+        return tong;
+    }
+    let m, n;
+    do {
+        m = parseInt(prompt("Nhập số hàng của ma trận:"));
+    } while (m <= 0);
+
+    do {
+        n = parseInt(prompt("Nhập số cột của ma trận:"));
+    } while (n <= 0);
+
+    const matrix = [];
+
+    for (let i = 0; i < m; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < n; j++) {
+            matrix[i][j] = parseInt(prompt(`Nhập giá trị cho phần tử (${i}, ${j}):`));
+        }
+    }
+    document.write("My matrix is </br>")
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            document.write(matrix[i][j] + "&nbsp; ");
+        }
+        document.write("</br>");
+    }
+    const tongSoChan = tinhTongSoChan(matrix);
+    document.write(`Tổng các số chẵn trong ma trận là: ${tongSoChan}`);
+</script>
+</body>
+</html>ml>

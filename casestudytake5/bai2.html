@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên tố trong matrix</title>
+</head>
+<body>
+<script>
+    // Hàm kiểm tra số nguyên tố
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    // Hàm liệt kê và đếm số nguyên tố trong mảng 2 chiều
+    function listAndCountPrimes(matrix) {
+        let primeNumbers = [];
+        let count = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (isPrime(matrix[i][j])) {
+                    primeNumbers.push(matrix[i][j]);
+                    count++;
+                }
+            }
+        }
+        document.write("Các số nguyên tố trong mảng là: " +primeNumbers + "&nbsp; ");
+        document.write("</br>");
+        document.write("Số lượng số nguyên tố trong mảng là: "+count);
+    }
+    let m, n;
+    do {
+        m = parseInt(prompt("Nhập số hàng của ma trận:"));
+    } while (m <= 0);
+
+    do {
+        n = parseInt(prompt("Nhập số cột của ma trận:"));
+    } while (n <= 0);
+
+    const matrix = [];
+
+    for (let i = 0; i < m; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < n; j++) {
+            matrix[i][j] = parseInt(prompt(`Nhập giá trị cho phần tử (${i}, ${j}):`));
+        }
+    }
+    document.write("My matrix is </br>")
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            document.write(matrix[i][j] + "&nbsp; ");
+        }
+        document.write("</br>");
+    }
+    listAndCountPrimes(matrix);
+</script>
+</body>
+</html>
